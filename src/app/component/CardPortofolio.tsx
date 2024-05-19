@@ -9,12 +9,15 @@ type PortofolioType = {
   image: string;
 };
 async function getPortfolio() {
-  const portofolio: PortofolioType[] = await fetch('/api/portfolio', {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  }).then((res) => res.json());
+  const portofolio: PortofolioType[] = await fetch(
+    'https://lymanto.vercel.app/api/portfolio',
+    {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }
+  ).then((res) => res.json());
   return portofolio;
 }
 

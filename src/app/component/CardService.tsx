@@ -12,12 +12,15 @@ type Portofolios = {
 };
 
 async function getCategory() {
-  const category: Category[] = await fetch('/api/category', {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  }).then((res) => res.json());
+  const category: Category[] = await fetch(
+    'https://lymanto.vercel.app/api/category',
+    {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }
+  ).then((res) => res.json());
   return category;
 }
 
