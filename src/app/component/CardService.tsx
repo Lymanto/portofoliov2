@@ -12,14 +12,13 @@ type Portofolios = {
 };
 
 async function getCategory() {
-  const res = await fetch('/api/category', {
+  const category: Category[] = await fetch('/api/category', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
-  });
-  const categories = await res.json();
-  return categories;
+  }).then((res) => res.json());
+  return category;
 }
 
 export default async function CardService() {

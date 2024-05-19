@@ -9,14 +9,13 @@ type PortofolioType = {
   image: string;
 };
 async function getPortfolio() {
-  const res = await fetch('/api/portfolio', {
+  const portofolio: PortofolioType[] = await fetch('/api/portfolio', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
-  });
-  const portfolios: PortofolioType[] = await res.json();
-  return portfolios;
+  }).then((res) => res.json());
+  return portofolio;
 }
 
 export default async function CardPortofolio() {
