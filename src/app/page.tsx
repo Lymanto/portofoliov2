@@ -161,11 +161,11 @@ export default async function Home() {
               <p className="font-medium text-secondary text-[1.5em]">
                 Complete Project
               </p>
-              <p className="text-[3em]">10+</p>
+              <p className="text-[3em]">20+</p>
             </div>
             <div>
               <p className="font-medium text-secondary text-[1.5em]">Client</p>
-              <p className="text-[3em]">5+</p>
+              <p className="text-[3em]">15+</p>
             </div>
           </div>
         </div>
@@ -205,9 +205,14 @@ export default async function Home() {
               My Awesome Service
             </h2>
             <p className="text-xl text-secondary leading-9 max-w-[25rem]">
-              Eget malesuada tortor ut sed. Tincidunt viverra malesuada nisl
-              vehicula vestibulum. Ut blandit fermentum, cursus nulla. Imperdiet
-              neque mi convallis quis interdum sagittis.
+              Welcome to My Awesome Services, where I&aposm specialize in
+              website development, UI/UX design, and mobile development. I
+              crafts stunning, functional websites, intuitive user interfaces,
+              and cutting-edge mobile apps to transform your digital presence.
+              Blend innovation with expertise to create customized solutions
+              that meet your unique needs. Partner with us for a seamless,
+              client-centric experience from concept to launch. Let’s build
+              something incredible together. Contact me today!
             </p>
             <div className="flex flex-col gap-3 mt-10 mb-6">
               <p className="text-2xl">Tech Stack</p>
