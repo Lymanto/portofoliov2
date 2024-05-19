@@ -1,7 +1,5 @@
 import * as React from 'react';
 import Image from 'next/image';
-import Dummy2 from '@/images/dummy2.jpeg';
-import { Portofolio } from '@prisma/client';
 import Link from './Link';
 type PortofolioType = {
   id: string;
