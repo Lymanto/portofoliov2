@@ -11,21 +11,21 @@ type Portofolios = {
   portofolios: number;
 };
 
-// async function getCategory() {
-//   const category: Category[] = await fetch('/api/category', {
-//     method: 'GET',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//   }).then((res) => res.json());
-//   return category;
-// }
+async function getCategory() {
+  const category: Category[] = await fetch('/api/category', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }).then((res) => res.json());
+  return category;
+}
 
 export default async function CardService() {
-  // const categories = await getCategory();
+  const categories = await getCategory();
   return (
     <>
-      {/* {categories.map((category: Category) => (
+      {categories.map((category: Category) => (
         <div
           className="md:min-w-[40rem] w-full bg-secondary/80 p-8 border border-white/[12%] rounded-[6px] backdrop-blur flex flex-row items-center justify-between"
           key={category.id}
@@ -43,7 +43,7 @@ export default async function CardService() {
               <h3 className="text-2xl font-semibold mb-2">{category.name}</h3>
             </div>
           </div>
-          <div>
+          {/* <div>
             <svg
               width="44"
               height="44"
@@ -68,10 +68,9 @@ export default async function CardService() {
                 stroke-linejoin="round"
               />
             </svg>
-          </div>
+          </div> */}
         </div>
-      ))} */}
-      test
+      ))}
     </>
   );
 }

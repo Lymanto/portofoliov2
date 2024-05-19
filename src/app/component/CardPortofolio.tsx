@@ -1,6 +1,6 @@
 import * as React from 'react';
-// import Image from 'next/image';
-// import Link from './Link';
+import Image from 'next/image';
+import Link from './Link';
 type PortofolioType = {
   id: string;
   name: string;
@@ -8,21 +8,21 @@ type PortofolioType = {
   description: string;
   image: string;
 };
-// async function getPortfolio() {
-//   const portofolio: PortofolioType[] = await fetch('/api/portfolio', {
-//     method: 'GET',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//   }).then((res) => res.json());
-//   return portofolio;
-// }
+async function getPortfolio() {
+  const portofolio: PortofolioType[] = await fetch('/api/portfolio', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }).then((res) => res.json());
+  return portofolio;
+}
 
 export default async function CardPortofolio() {
-  // const portfolios = await getPortfolio();
+  const portfolios = await getPortfolio();
   return (
     <>
-      {/* {portfolios.map((portfolio: PortofolioType) => (
+      {portfolios.map((portfolio: PortofolioType) => (
         <Link
           openInNewTab
           href={portfolio.slug}
@@ -43,8 +43,7 @@ export default async function CardPortofolio() {
             <p className="text-lg text-secondary">{portfolio.description}</p>
           </div>
         </Link>
-      ))} */}
-      test
+      ))}
     </>
   );
 }
