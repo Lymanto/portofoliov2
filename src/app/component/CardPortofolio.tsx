@@ -1,16 +1,47 @@
 import * as React from 'react';
 import Image from 'next/image';
 import Dummy2 from '@/images/dummy2.jpeg';
-export default function CardPortofolio() {
+import { Portofolio } from '@prisma/client';
+import Link from './Link';
+type PortofolioType = {
+  id: string;
+  name: string;
+  slug: string;
+  description: string;
+  image: string;
+};
+async function getPortfolio() {
+  const res = await fetch('http://localhost:3000/api/portfolio');
+  const portfolios: PortofolioType[] = await res.json();
+  return portfolios;
+}
+
+export default async function CardPortofolio() {
+  const portfolios = await getPortfolio();
   return (
-    <div className="flex flex-col hover:scale-[1.02] transition-all duration-200">
-      <div className=" relative w-full aspect-[4/3] overflow-hidden rounded-t-xl">
-        <Image src={Dummy2} alt="Dummy 2" fill style={{ objectFit: 'cover' }} />
-      </div>
-      <div className=" bg-third/30 backdrop-blur p-5 rounded-b-xl">
-        <h3 className="mb-2 font-medium text-xl">VPN Mobile App</h3>
-        <p className="text-lg text-secondary">Mobile app</p>
-      </div>
-    </div>
+    <>
+      {portfolios.map((portfolio: PortofolioType) => (
+        <Link
+          openInNewTab
+          href={portfolio.slug}
+          className="flex flex-col hover:scale-[1.02] transition-all duration-200"
+          key={portfolio.id}
+        >
+          <div className=" relative w-full aspect-[4/3] overflow-hidden rounded-t-xl">
+            <Image
+              sizes="(max-width: 768px) 100vw, 33vw"
+              src={portfolio.image}
+              alt="Dummy 2"
+              fill
+              style={{ objectFit: 'cover' }}
+            />
+          </div>
+          <div className=" bg-third/30 backdrop-blur p-5 rounded-b-xl">
+            <h3 className="mb-2 font-medium text-xl">{portfolio.name}</h3>
+            <p className="text-lg text-secondary">{portfolio.description}</p>
+          </div>
+        </Link>
+      ))}
+    </>
   );
 }

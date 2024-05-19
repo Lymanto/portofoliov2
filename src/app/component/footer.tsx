@@ -9,10 +9,10 @@ export default function Footer() {
           <svg
             stroke="currentColor"
             fill="none"
-            stroke-width="2"
+            strokeWidth="2"
             viewBox="0 0 24 24"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             className="h-7 w-7 align-middle text-white hover:text-primary "
             height="1em"
             width="1em"
@@ -26,7 +26,7 @@ export default function Footer() {
           <svg
             stroke="currentColor"
             fill="currentColor"
-            stroke-width="0"
+            strokeWidth="0"
             role="img"
             viewBox="0 0 24 24"
             className="my-auto h-6 w-6 align-middle text-white transition-colors hover:text-primary "
@@ -45,7 +45,7 @@ export default function Footer() {
           <svg
             stroke="currentColor"
             fill="currentColor"
-            stroke-width="0"
+            strokeWidth="0"
             role="img"
             viewBox="0 0 24 24"
             className="my-auto h-6 w-6 align-middle text-white transition-colors hover:text-primary "

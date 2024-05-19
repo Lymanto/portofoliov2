@@ -6,7 +6,7 @@ export default function TypewriterComponent() {
   return (
     <Typewriter
       options={{
-        strings: ['Front-End Developer', 'Mobile Developer', 'UI/UX Designer'],
+        strings: ['Full-stack Developer', 'Mobile Developer', 'UI/UX Designer'],
         autoStart: true,
         loop: true,
         deleteSpeed: 70,
