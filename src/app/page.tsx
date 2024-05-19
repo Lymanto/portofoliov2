@@ -161,11 +161,11 @@ export default async function Home() {
               <p className="font-medium text-secondary text-[1.5em]">
                 Complete Project
               </p>
-              <p className="text-[3em]">20+</p>
+              <p className="text-[3em]">10+</p>
             </div>
             <div>
               <p className="font-medium text-secondary text-[1.5em]">Client</p>
-              <p className="text-[3em]">10+</p>
+              <p className="text-[3em]">5+</p>
             </div>
           </div>
         </div>

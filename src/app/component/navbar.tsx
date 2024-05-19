@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Image from 'next/image';
 import Logo from '@/images/logo.svg';
+import Link from './Link';
 export default function Navbar() {
   return (
     <header className=" md:px-0 px-5 h-[7.5rem] flex items-center sticky top-0 z-10">
@@ -9,15 +10,15 @@ export default function Navbar() {
           <Image src={Logo} alt="logo" />
         </div>
         <div className="flex gap-10 text-white/[.70] text-lg">
-          <a className="active hover:text-white" href="#">
+          <Link className="active hover:text-white" href="#service">
             Services
-          </a>
-          <a className="hover:text-white" href="#">
+          </Link>
+          <Link className="hover:text-white" href="#portofolio">
             Portofolio
-          </a>
-          <a className="hover:text-white" href="#">
-            About
-          </a>
+          </Link>
+          <Link className="hover:text-white" href="#contact">
+            Contact
+          </Link>
         </div>
       </nav>
     </header>
