@@ -42,7 +42,7 @@ export default async function Home() {
             <div className="flex flex-row gap-8 mt-3">
               <Link
                 className="flex items-center text-gray-300 hover:text-white font-medium text-base mb-[3.75rem]"
-                href="/public/Software Engineer - Lymanto Hadibrata - CV.pdf"
+                href="/Software Engineer - Lymanto Hadibrata - CV.pdf"
                 openInNewTab
               >
                 <svg
