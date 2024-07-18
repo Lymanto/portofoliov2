@@ -40,7 +40,7 @@ export default function RootLayout({
         />
         <meta property="og:type" content={metadata.openGraph.type} />
         <meta property="og:url" content={metadata.openGraph.url} />
-        <meta property="og:image" content="/favicon.ico" />
+        <meta property="og:image" content="/logo.png" />
         <meta property="og:locale" content="en_GB" />
         <meta property="og:site_name" content={metadata.title} />
         <meta property="twitter:site" content="@Lymanto_" />
@@ -50,7 +50,7 @@ export default function RootLayout({
           property="twitter:description"
           content={metadata.openGraph.description}
         />
-        <meta property="twitter:image" content="/favicon.ico" />
+        <meta property="twitter:image" content="/logo.png" />
       </Head>
       <body className={`${poppins.className} text-white bg-primary `}>
         {children}
