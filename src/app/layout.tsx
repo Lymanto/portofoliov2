@@ -16,7 +16,7 @@ export const metadata = {
     title: 'Lymanto Hadibrata',
     description: 'This my personal website and portofolio by Lymanto Hadibrata',
     type: 'website',
-    url: 'lymanto.vercel.app',
+    url: 'https://lymanto.vercel.app',
   },
 };
 
@@ -33,6 +33,24 @@ export default function RootLayout({
         <meta name="description" content={metadata.description} />
         <title>{metadata.title}</title>
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta
+          property="og:description"
+          content={metadata.openGraph.description}
+        />
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:image" content="/favicon.ico" />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:site_name" content={metadata.title} />
+        <meta name="twitter:site" content="@Lymanto_" />
+        <meta name="twitter:creator" content="@Lymanto_" />
+        <meta name="twitter:title" content={metadata.openGraph.title} />
+        <meta
+          name="twitter:description"
+          content={metadata.openGraph.description}
+        />
+        <meta name="twitter:image" content="/favicon.ico" />
       </Head>
       <body className={`${poppins.className} text-white bg-primary `}>
         {children}
