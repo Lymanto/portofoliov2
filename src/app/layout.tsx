@@ -43,14 +43,14 @@ export default function RootLayout({
         <meta property="og:image" content="/favicon.ico" />
         <meta property="og:locale" content="en_GB" />
         <meta property="og:site_name" content={metadata.title} />
-        <meta name="twitter:site" content="@Lymanto_" />
-        <meta name="twitter:creator" content="@Lymanto_" />
-        <meta name="twitter:title" content={metadata.openGraph.title} />
+        <meta property="twitter:site" content="@Lymanto_" />
+        <meta property="twitter:creator" content="@Lymanto_" />
+        <meta property="twitter:title" content={metadata.openGraph.title} />
         <meta
-          name="twitter:description"
+          property="twitter:description"
           content={metadata.openGraph.description}
         />
-        <meta name="twitter:image" content="/favicon.ico" />
+        <meta property="twitter:image" content="/favicon.ico" />
       </Head>
       <body className={`${poppins.className} text-white bg-primary `}>
         {children}
