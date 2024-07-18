@@ -40,9 +40,12 @@ export default function RootLayout({
         />
         <meta property="og:type" content={metadata.openGraph.type} />
         <meta property="og:url" content={metadata.openGraph.url} />
-        <meta property="og:image" content="/logo.png" />
+        <meta
+          property="og:image"
+          content="https://lymanto.vercel.app/logo.png"
+        />
         <meta property="og:locale" content="en_GB" />
-        <meta property="og:site_name" content={metadata.title} />
+        <meta property="og:site_name" content={metadata.openGraph.url} />
         <meta property="twitter:site" content="@Lymanto_" />
         <meta property="twitter:creator" content="@Lymanto_" />
         <meta property="twitter:title" content={metadata.openGraph.title} />
@@ -50,7 +53,10 @@ export default function RootLayout({
           property="twitter:description"
           content={metadata.openGraph.description}
         />
-        <meta property="twitter:image" content="/logo.png" />
+        <meta
+          property="twitter:image"
+          content="https://lymanto.vercel.app/logo.png"
+        />
       </Head>
       <body className={`${poppins.className} text-white bg-primary `}>
         {children}
